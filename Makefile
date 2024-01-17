@@ -46,6 +46,7 @@ COMMON_ARGS += --platform=$(PLATFORM)
 COMMON_ARGS += --build-arg=SOURCE_DATE_EPOCH=$(SOURCE_DATE_EPOCH)
 COMMON_ARGS += --build-arg=TAG="$(TAG)"
 COMMON_ARGS += --build-arg=PKGS="$(PKGS)"
+COMMON_ARGS += --build-arg=PKGS_PREFIX="$(PKGS_PREFIX)"
 
 # targets defines all the available targets
 
@@ -88,6 +89,7 @@ NONFREE_TARGETS = nonfree-kmod-nvidia
 
 EXTENSIONS_IMAGE_REF ?= $(REGISTRY_AND_USERNAME)/extensions:$(TAG)
 PKGS ?= v1.6.0-25-g6868f38
+PKGS_PREFIX ?= ghcr.io/siderolabs
 
 # help menu
 
